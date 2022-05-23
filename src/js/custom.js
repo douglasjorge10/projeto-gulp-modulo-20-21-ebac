@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
 
     $('#owl-carousel').owlCarousel();
 
@@ -14,7 +14,7 @@ $(document).ready(function(){
     
     $('.featured-item a').addClass('btn btn-dark stretch-link');
     
-    $('.featured-item h4').dblclick( function(){
+    $('.featured-item h4').trigger( function(){
 
        $(this).css({
            'color': '#f00',
@@ -92,7 +92,7 @@ $('.nav-modal-open').on('click', function(e){
        console.log('verificar campos obrigatórios')
        return false
     } else {
-       $(this).submit()  
+       $(this).on('submit', this)  
     }
 
  })
