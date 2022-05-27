@@ -283,6 +283,10 @@ p.logo{
 	font-size: 13px;
 	transition: all 0.5s;
 }
+div.social-icon ul li a img{
+	width: 45px;
+}
+
 .footer .social-icons a:hover {
 	background-color: #3a8bcd;
 }
