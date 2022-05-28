@@ -285,6 +285,10 @@ p.logo{
 }
 div.social-icon ul li a img{
 	width: 45px;
+	height: 45px;
+}
+div.social-icon ul li a{
+	margin-left: 5px;
 }
 
 .footer .social-icons a:hover {
