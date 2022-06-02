@@ -56,6 +56,13 @@ function tarefasHTML(callback){
 
         callback()
 }
+function tarefasICO(callback){
+    gulp.src('./src/**/*.ico')
+
+        .pipe(gulp.dest('./dist'))
+
+        callback()
+}
 gulp.task('serve', function(){
 
     browserSync.init({
@@ -67,8 +74,9 @@ gulp.task('serve', function(){
     gulp.watch('./src/**/*').on('change', reload)
 })
 
-const process = series( tarefasHTML, tarefasCSS, tarefasJS)
+const process = series( tarefasHTML, tarefasCSS, tarefasJS, tarefasICO)
 
 exports.styles = tarefasCSS
 exports.scripts = tarefasJS
+exports.ico = tarefasICO
 exports.default = process
